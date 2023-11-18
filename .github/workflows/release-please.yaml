@@ -20,8 +20,10 @@ jobs:
         uses: actions/checkout@v4
       -
         name: Docker meta
-        if: ${{ steps.release.outputs.release_created }}
         id: meta
+        if: ${{ steps.release.outputs.release_created }}
         uses: docker/metadata-action@v5
         with:
+          labels: |
+            com.github.release.tag=${{ steps.release.outputs.tag_name }}
           images: name/app
