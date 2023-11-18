@@ -18,11 +18,10 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v4
-      - run: echo "${{ steps.release.outputs.releases_created }}"
       -
         name: Docker meta
         id: meta
-        if: ${{ steps.release.outputs.release_created }}
+        if: ${{ steps.release.outputs.releases_created }}
         uses: docker/metadata-action@v5
         with:
           labels: |
