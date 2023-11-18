@@ -18,7 +18,7 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v4
-      - run: echo "${{ steps.release.outputs.release_created }}"
+      - run: echo "${{ steps.release.outputs.releases_created }}"
       -
         name: Docker meta
         id: meta
