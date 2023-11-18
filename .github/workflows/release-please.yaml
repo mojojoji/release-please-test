@@ -27,7 +27,5 @@ jobs:
         if: ${{ steps.release.outputs['pitcher--release_created'] }}
         uses: docker/metadata-action@v5
         with:
-          labels: |
-            com.github.release.tag=${{ steps.release.outputs['pitcher--tag_name'] }}
-            com.github.release.body="${{ steps.release.outputs['pitcher--body'] }}"
+          labels: com.github.release.body=${{ format('Hello {0}', steps.release.outputs['pitcher--body']) }}
           images: name/app
