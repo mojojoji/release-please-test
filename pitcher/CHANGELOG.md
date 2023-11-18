@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.16](https://github.com/mojojoji/release-please-test/compare/pitcher-v0.0.15...pitcher-v0.0.16) (2023-11-18)
+
+
+### Bug Fixes
+
+* test ([e6d9f42](https://github.com/mojojoji/release-please-test/commit/e6d9f425e1fc49903c98f670931525851698e459))
+
 ## [0.0.15](https://github.com/mojojoji/release-please-test/compare/pitcher-v0.0.14...pitcher-v0.0.15) (2023-11-18)
 
 
