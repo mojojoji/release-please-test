@@ -19,14 +19,19 @@ jobs:
         name: Checkout
         uses: actions/checkout@v4
       -
-        run: echo '${{ steps.release.outputs['pitcher--body'] }}'
-        
+        id: release_body
+        run: |
+          release_body="${{ steps.release.outputs['pitcher--body'] }}"
+          release_body=${release_body//\#/%23}
+          release_body=${release_body//$'\n'/%0A}
+          echo "releaseBody=${release_body}" >> "$GITHUB_OUTPUT"
+
       -
         name: Docker meta
         id: meta
         if: ${{ steps.release.outputs['pitcher--release_created'] }}
         uses: docker/metadata-action@v5
         with:
-          labels: com.github.release.body=${{ format('Hello {0}', steps.release.outputs['pitcher--body']) }}
+          labels: com.github.release.body=${{ steps.release_body.outputs.releaseBody }}
           sep-labels: ','
           images: name/app
