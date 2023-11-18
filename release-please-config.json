@@ -1,0 +1,10 @@
+{
+    "packages": {
+        "pitcher": {
+            "release-type": "node"
+        },
+        "pitcher-manager": {
+            "release-type": "node"
+        }
+    }
+}

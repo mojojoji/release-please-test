@@ -1,0 +1,17 @@
+name: Release please
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release_please:
+    name: Release Please
+    runs-on: default
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          command: manifest
+          monorepo-tags: true
