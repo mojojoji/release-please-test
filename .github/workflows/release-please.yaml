@@ -32,6 +32,6 @@ jobs:
         if: ${{ steps.release.outputs['pitcher--release_created'] }}
         uses: docker/metadata-action@v5
         with:
-          labels: com.github.release.body=${{ steps.release_body.outputs.releaseBody }}
-          sep-labels: ','
+          labels: |
+            io.csbops.backstage.image.notes=${{ steps.release_body.outputs.releaseBody }}  
           images: name/app
