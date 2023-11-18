@@ -21,9 +21,9 @@ jobs:
       -
         name: Docker meta
         id: meta
-        if: ${{ steps.release.outputs.releases_created }}
+        if: ${{ steps.release.outputs['pitcher--release_created'] }}
         uses: docker/metadata-action@v5
         with:
           labels: |
-            com.github.release.tag=${{ steps.release.outputs.tag_name }}
+            com.github.release.tag=${{ steps.release.outputs['pitcher--tag_name'] }}
           images: name/app
