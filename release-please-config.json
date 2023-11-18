@@ -3,7 +3,11 @@
         "pitcher": {
             "release-type": "node",
             "extra-files": [
-                "test/package.json"
+                {
+                    "type": "json",
+                    "path": "test/package.json",
+                    "jsonpath": "$.version"
+                }
             ]
         },
         "pitcher-manager": {
