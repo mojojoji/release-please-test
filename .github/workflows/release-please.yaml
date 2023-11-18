@@ -29,5 +29,5 @@ jobs:
         with:
           labels: |
             com.github.release.tag=${{ steps.release.outputs['pitcher--tag_name'] }}
-            com.github.release.body=${{ toJSON(steps.release.outputs) }}
+            com.github.release.body=${{ steps.release.outputs['pitcher--body'] }}
           images: name/app
