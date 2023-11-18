@@ -15,3 +15,13 @@ jobs:
         with:
           command: manifest
           monorepo-tags: true
+      -
+        name: Checkout
+        uses: actions/checkout@v4
+      -
+        name: Docker meta
+        if: ${{ steps.release.outputs.release_created }}
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: name/app
