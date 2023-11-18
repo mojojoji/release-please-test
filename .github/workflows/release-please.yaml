@@ -28,4 +28,5 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           labels: com.github.release.body=${{ format('Hello {0}', steps.release.outputs['pitcher--body']) }}
+          sep-labels: ','
           images: name/app
