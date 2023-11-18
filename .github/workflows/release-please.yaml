@@ -19,7 +19,7 @@ jobs:
         name: Checkout
         uses: actions/checkout@v4
       -
-        run: echo '${{ toJSON(steps.release.outputs) }}'
+        run: echo '${{ steps.release.outputs['pitcher--body'] }}'
         
       -
         name: Docker meta
@@ -29,5 +29,5 @@ jobs:
         with:
           labels: |
             com.github.release.tag=${{ steps.release.outputs['pitcher--tag_name'] }}
-            com.github.release.body='${{ steps.release.outputs['pitcher--body'] }}'
+            com.github.release.body="${{ steps.release.outputs['pitcher--body'] }}"
           images: name/app
