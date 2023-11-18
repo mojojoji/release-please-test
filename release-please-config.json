@@ -1,7 +1,10 @@
 {
     "packages": {
         "pitcher": {
-            "release-type": "node"
+            "release-type": "node",
+            "extra-files": [
+                "test/package.json"
+            ]
         },
         "pitcher-manager": {
             "release-type": "node"
