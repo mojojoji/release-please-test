@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.0.22](https://github.com/mojojoji/release-please-test/compare/pitcher-v0.0.21...pitcher-v0.0.22) (2023-11-21)
+
+
+### Bug Fixes
+
+* make workspace ([d72cd51](https://github.com/mojojoji/release-please-test/commit/d72cd51690b478e370a5a4b6b83dfd35670cc041))
+
+
+### Code Refactoring
+
+* test ([e327317](https://github.com/mojojoji/release-please-test/commit/e327317202488f10b423c05c255719eada88c782))
+* test ([205b672](https://github.com/mojojoji/release-please-test/commit/205b672187d195bfdcf8714e6ae7e4ff95622883))
+
 ## [0.0.21](https://github.com/mojojoji/release-please-test/compare/pitcher-v0.0.20...pitcher-v0.0.21) (2023-11-18)
 
 
