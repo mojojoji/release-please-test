@@ -1,4 +1,5 @@
 {
     "name": "pitcher",
-    "version": "0.0.21"
+    "version": "0.0.21",
+    "workspaces": ["test"]
 }
